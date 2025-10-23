@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ruby: cimg/ruby@2.1.1
+  ruby: circleci/ruby@2.1.1
   # heroku: circleci/heroku@1.2.3
 
 jobs:
