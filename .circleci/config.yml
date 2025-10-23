@@ -1,12 +1,12 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@2.1.1
+  ruby: cimg/ruby@2.1.1
   # heroku: circleci/heroku@1.2.3
 
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.8
+      - image: cimg/ruby:2.7.8
     working_directory: ~/rails-docker-study/src
     steps:
       - checkout:
@@ -15,8 +15,8 @@ jobs:
 
   test:
     docker:
-      - image: circleci/ruby:2.7.8
-      - image: circleci/mysql:5.5
+      - image: cimg/ruby:2.7.8
+      - image: cimg/mysql:5.5
         environment:
           MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: app_test
